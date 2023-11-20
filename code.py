@@ -46,7 +46,7 @@ async def auto_reply_to_photo(client, message):
      (filters.chat(group_chat_id2) & filters.user(allowed_user_id2)) |
      (filters.chat(group_chat_id2) & filters.user(allowed_user_id3)))
 )
-async def wrapper_function(message):
+async def wrapper_function(_, message):  # Use _ to denote an unused variable
     await auto_reply_to_photo(app, message)
 
 if __name__ == "__main__":
